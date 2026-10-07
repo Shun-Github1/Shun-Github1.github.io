@@ -1,22 +1,33 @@
-# Shun Kwok — personal website
+# Editing the website
 
-Work in progress: About, Projects, and Blog, with a dark architectural sketch design.
+Edit `content.json`. The layout is in `templates/page.html` and `dist/style.css`; do not edit generated HTML pages.
 
-## Editing
+## Add a dissertation
 
-- `dist/index.html`: About page and shared navigation.
-- `create-pages.cjs`: Projects and Blog content. Run `node create-pages.cjs` after editing this file to regenerate those two pages.
-- `dist/style.css`: shared appearance and responsive layout.
-- `dist/app.js`: page transitions.
-- `dist/diagram.js`: interactive Meerkat overview.
-- `dist/assets/`: pavilion illustration and original Meerkat diagram.
+Replace `academic.dissertation: null` with an object:
 
-Blog entries are draft templates. The pavilion currently uses an illustration and transitions, not a full 3D scene.
+```json
+{
+  "id": "dissertation",
+  "title": "Your dissertation title",
+  "year": "2026",
+  "summary": "Your abstract.",
+  "links": [{ "label": "Read PDF", "url": "/materials/dissertation.pdf" }]
+}
+```
 
-## Preview
+Copy the PDF to `dist/materials/dissertation.pdf`. Create that folder if needed.
 
-Run `node serve.cjs`, then open http://127.0.0.1:4173.
+## Add, remove or reorder entries
 
-## Publishing
+The lists `academic.essays`, `software`, `projects`, and `blog` accept the same objects. Add an object to add an entry; remove it to remove the entry; change the array order to change display order. Optional `published: false` hides an entry. Use null to remove the dissertation. Optional `paragraphs` is an array of plain-text paragraphs for a blog post. Optional `date` supplies its date. Text is escaped automatically; do not insert HTML.
 
-GitHub Actions publishes `dist` to GitHub Pages whenever changes reach `main`. No dependencies or build step are required. The `.openai/hosting.json` file records the previous Sites deployment; GitHub Pages does not use it.
+The `architecture: true` option adds the Meerkat diagram button; use it on at most one software item.
+
+## Preview and publish
+
+Run `node create-pages.cjs`, then `node serve.cjs`. Open http://127.0.0.1:4173.
+
+For an unpublished layout demonstration with sample dissertation and essay entries, run `node create-pages.cjs --preview`, then `node serve.cjs preview`. Samples are generated only in the ignored `preview` folder.
+
+Commit and push content.json, templates, assets and styling. GitHub Actions regenerates all four pages and publishes them automatically. The Academic page is the homepage. The source photo and materials are public when pushed.

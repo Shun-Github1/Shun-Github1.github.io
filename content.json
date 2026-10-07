@@ -1,0 +1,115 @@
+{
+  "name": "Shun Kwok",
+  "email": "shun.kwok@gmail.com",
+  "portrait": "/assets/shun-kwok.jpg",
+  "academic": {
+    "dissertation": {
+      "id": "dissertation",
+      "title": "Dissertation title",
+      "year": "Year",
+      "summary": "Placeholder abstract. A short paragraph describing the research question, evidence, and argument.",
+      "placeholder": true
+    },
+    "essays": [
+      {
+        "id": "essay-one",
+        "title": "Essay title",
+        "year": "Year",
+        "summary": "Placeholder summary of the essay’s question and argument.",
+        "placeholder": true
+      },
+      {
+        "id": "essay-two",
+        "title": "Second essay title",
+        "year": "Year",
+        "summary": "Placeholder summary of the essay’s question and argument.",
+        "placeholder": true
+      },
+      {
+        "id": "essay-three",
+        "title": "Third essay title",
+        "year": "Year",
+        "summary": "Placeholder summary of the essay’s question and argument.",
+        "placeholder": true
+      }
+    ]
+  },
+  "software": [
+    {
+      "id": "meerkat",
+      "title": "Meerkat",
+      "summary": "News aggregation and publishing software for newsletter-media.com.",
+      "description": "A scheduled AWS Fargate pipeline collects, translates, and analyses articles. PostgreSQL stores the results; a Flask API serves them to readers.",
+      "architecture": true,
+      "links": [
+        {
+          "label": "Architecture diagram",
+          "url": "/assets/Meerkat-Structure.drawio"
+        },
+        {
+          "label": "newsletter-media.com",
+          "url": "https://newsletter-media.com"
+        }
+      ]
+    },
+    {
+      "id": "software-placeholder",
+      "title": "Software title",
+      "summary": "Placeholder description of what the software does.",
+      "placeholder": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "steam-and-steel",
+      "title": "Steam and Steel",
+      "summary": "A late-Victorian total-conversion mod for Medieval II: Total War: Kingdoms.",
+      "links": [
+        {
+          "label": "ModDB: description and downloads",
+          "url": "https://www.moddb.com/mods/steam-and-steel-total-war"
+        }
+      ]
+    },
+    {
+      "id": "newsletter",
+      "title": "newsletter-media.com",
+      "summary": "A media start-up using Meerkat to aggregate and publish news.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://newsletter-media.com"
+        },
+        {
+          "label": "Meerkat software",
+          "url": "/software/#meerkat"
+        }
+      ]
+    },
+    {
+      "id": "project-placeholder",
+      "title": "Project title",
+      "summary": "Placeholder description of the project and your contribution.",
+      "placeholder": true
+    }
+  ],
+  "blog": [
+    {
+      "id": "post-one",
+      "title": "Post title",
+      "date": "Date",
+      "summary": "Placeholder introduction to a blog post.",
+      "paragraphs": [
+        "Placeholder body text. This space is for the argument, examples, and supporting links."
+      ],
+      "placeholder": true
+    },
+    {
+      "id": "post-two",
+      "title": "Second post title",
+      "date": "Date",
+      "summary": "Placeholder introduction to another post.",
+      "placeholder": true
+    }
+  ]
+}
