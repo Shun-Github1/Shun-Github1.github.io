@@ -106,5 +106,12 @@
       "label": "Ironclads and Blog: Bret Devereaux",
       "url": "https://acoup.blog/"
     }
-  ]
+  ],
+  "introduction": {
+    "title": "Alex Morgan",
+    "paragraphs": [
+      "I study how institutions collect information and use it to organise public life. My research brings together social history, archives, and the history of technology.",
+      "My current work examines classification and comparison: how categories are made, how they travel, and what they leave out."
+    ]
+  }
 }
