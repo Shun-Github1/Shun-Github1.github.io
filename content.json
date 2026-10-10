@@ -5,111 +5,123 @@
   "academic": {
     "dissertation": {
       "id": "dissertation",
-      "title": "Dissertation title",
-      "year": "Year",
-      "summary": "Placeholder abstract. A short paragraph describing the research question, evidence, and argument.",
-      "placeholder": true
+      "title": "Classification and Public Life",
+      "year": "2024",
+      "summary": "This study examines how rankings and categories shape institutions. It follows the movement from individual records to public comparisons, asking how measurement changes the people and organisations being measured.",
+      "description": "The analysis considers the relationship between technical decisions and social authority: who defines a category, which differences it preserves, and what becomes invisible when records are reduced to a common scale."
     },
     "essays": [
       {
         "id": "essay-one",
-        "title": "Essay title",
-        "year": "Year",
-        "summary": "Placeholder summary of the essay’s question and argument.",
-        "placeholder": true
+        "title": "Reading a Society through Its Records",
+        "year": "2023",
+        "summary": "An examination of the ways information is preserved, arranged, and lost. Archives are treated as products of selection rather than complete accounts of the past."
       },
       {
         "id": "essay-two",
-        "title": "Second essay title",
-        "year": "Year",
-        "summary": "Placeholder summary of the essay’s question and argument.",
-        "placeholder": true
-      },
-      {
-        "id": "essay-three",
-        "title": "Third essay title",
-        "year": "Year",
-        "summary": "Placeholder summary of the essay’s question and argument.",
-        "placeholder": true
+        "title": "The Work of Comparison",
+        "year": "2023",
+        "summary": "A short essay on the assumptions required to compare institutions, and on the consequences of turning those comparisons into rankings."
       }
     ]
   },
   "software": [
     {
-      "id": "meerkat",
-      "title": "Meerkat",
-      "summary": "News aggregation and publishing software for newsletter-media.com.",
-      "description": "A scheduled AWS Fargate pipeline collects, translates, and analyses articles. PostgreSQL stores the results; a Flask API serves them to readers.",
-      "architecture": true,
-      "links": [
-        {
-          "label": "Architecture diagram",
-          "url": "/assets/Meerkat-Structure.drawio"
-        },
-        {
-          "label": "newsletter-media.com",
-          "url": "https://newsletter-media.com"
-        }
-      ]
+      "id": "data-browser",
+      "title": "Data Browser",
+      "summary": "A tool for searching and publishing structured collections. Researchers can inspect tables, filter records, and share results through a web interface or an API.",
+      "description": "It accepts common tabular formats and supports additional importers and visualisations through extensions."
     },
     {
-      "id": "software-placeholder",
-      "title": "Software title",
-      "summary": "Placeholder description of what the software does.",
-      "placeholder": true
+      "id": "collection-tools",
+      "title": "Collection Tools",
+      "summary": "Small utilities for converting research material into queryable tables, with repeatable import steps and a record of the original source."
     }
   ],
   "projects": [
     {
-      "id": "steam-and-steel",
-      "title": "Steam and Steel",
-      "summary": "A late-Victorian total-conversion mod for Medieval II: Total War: Kingdoms.",
-      "links": [
-        {
-          "label": "ModDB: description and downloads",
-          "url": "https://www.moddb.com/mods/steam-and-steel-total-war"
-        }
-      ]
+      "id": "machine-archive",
+      "title": "The Writing Machine Archive",
+      "year": "2024–2025",
+      "summary": "A digital exhibition tracing the development of mechanical writing across different languages.",
+      "description": "The collection combines photographs, object descriptions, and archival material to explain how designers addressed scripts that could not be accommodated by a conventional alphabetic keyboard."
     },
     {
-      "id": "newsletter",
-      "title": "newsletter-media.com",
-      "summary": "A media start-up using Meerkat to aggregate and publish news.",
-      "links": [
-        {
-          "label": "Website",
-          "url": "https://newsletter-media.com"
-        },
-        {
-          "label": "Meerkat software",
-          "url": "/software/#meerkat"
-        }
-      ]
-    },
-    {
-      "id": "project-placeholder",
-      "title": "Project title",
-      "summary": "Placeholder description of the project and your contribution.",
-      "placeholder": true
+      "id": "public-catalogue",
+      "title": "A Public Catalogue",
+      "year": "2023–2024",
+      "summary": "An illustrated collection of objects and documents organised by their use, provenance, and historical setting."
     }
   ],
   "blog": [
     {
-      "id": "post-one",
-      "title": "Post title",
-      "date": "Date",
-      "summary": "Placeholder introduction to a blog post.",
+      "id": "simulation",
+      "title": "What a Strategy Game Chooses to Represent",
+      "date": "18 September 2024",
+      "summary": "Historical games reach large audiences, but their rules select which parts of the past a player can see.",
       "paragraphs": [
-        "Placeholder body text. This space is for the argument, examples, and supporting links."
-      ],
-      "placeholder": true
+        "A useful reading begins with those choices. Combat, political institutions, and economic resources do not receive equal attention; each is translated into a different set of decisions. Examining that translation offers a way to discuss both the game and the historical interpretation it presents."
+      ]
     },
     {
-      "id": "post-two",
-      "title": "Second post title",
-      "date": "Date",
-      "summary": "Placeholder introduction to another post.",
-      "placeholder": true
+      "id": "archive-notes",
+      "title": "An Object Is Not Its Catalogue Entry",
+      "date": "4 September 2024",
+      "summary": "A catalogue makes an object findable. It also compresses its history into a small number of fields. The gap between those two functions deserves attention."
+    }
+  ],
+  "newsletter": [
+    {
+      "id": "dispatch",
+      "title": "The Weekly Dispatch",
+      "summary": "A fortnightly letter on economic history and public affairs, combining a short argument with charts and a reading list."
+    },
+    {
+      "id": "issue-one",
+      "title": "When Energy Becomes a Security Question",
+      "date": "12 September 2024",
+      "summary": "How disruptions to supply change the relationship between emergency spending, industrial policy, and longer-term investment."
+    },
+    {
+      "id": "issue-two",
+      "title": "The Infrastructure behind a Market",
+      "date": "29 August 2024",
+      "summary": "A look at the institutions that allow a financial market to function, and what becomes visible when liquidity disappears."
+    }
+  ],
+  "ironclads": [
+    {
+      "id": "naval-study",
+      "title": "Fleets, Trade and State Power",
+      "summary": "A study of naval power as an economic system: ships depend on finance, ports, supply networks, and the institutions that maintain them.",
+      "description": "The material is organised around fleet construction, commercial routes, and the relationship between military commitments and available resources."
+    },
+    {
+      "id": "fleet-records",
+      "title": "Fleet Records",
+      "summary": "Comparative notes on ships and the societies that built them, arranged as short entries with supporting references."
+    }
+  ],
+  "sampleSources": [
+    {
+      "label": "Academic: Kieran Healy",
+      "url": "https://kieranhealy.org/publications/tos/"
+    },
+    {
+      "label": "Projects: Thomas Mullaney",
+      "url": "https://www.tsmullaney.com/"
+    },
+    {
+      "label": "Software: Datasette",
+      "url": "https://datasette.io/"
+    },
+    {
+      "label": "Newsletter: Adam Tooze",
+      "url": "https://adamtooze.com/"
+    },
+    {
+      "label": "Ironclads and Blog: Bret Devereaux",
+      "url": "https://acoup.blog/"
     }
   ]
 }

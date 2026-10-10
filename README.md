@@ -31,3 +31,4 @@ Run `node create-pages.cjs`, then `node serve.cjs`. Open http://127.0.0.1:4173.
 For an unpublished layout demonstration with sample dissertation and essay entries, run `node create-pages.cjs --preview`, then `node serve.cjs preview`. Samples are generated only in the ignored `preview` folder.
 
 Commit and push content.json, templates, assets and styling. GitHub Actions regenerates all four pages and publishes them automatically. The Academic page is the homepage. The source photo and materials are public when pushed.
+`nNewsletter and Ironclads are independent lists in content.json. sampleSources controls the collapsed attribution note; remove it when replacing the fictionalised design samples with original material. Previous content is retained in drafts/content-before-samples.json.
