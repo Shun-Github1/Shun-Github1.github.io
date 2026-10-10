@@ -17,9 +17,9 @@ function entry(item, heading='h2') {
 const example = (title, id) => ({id,title,summary:'Example placement — replace with your title and abstract.',year:'Year'});
 const dissertation = data.academic.dissertation?.published === false ? null : data.academic.dissertation;
 const essays = visible(data.academic.essays);
-const academic = `<div class="academic-layout"><section class="academic-content"><h1 class="sr-only">Academic</h1><section class="dissertation"><h2>Dissertation</h2>${dissertation ? entry(dissertation,'h3') : preview ? entry(example('Dissertation title','dissertation-example'),'h3') : '<p class="empty-state">Not uploaded.</p>'}</section><section class="essay-list"><h2>Selected essays</h2>${essays.length ? essays.map(item=>entry(item,'h3')).join('') : preview ? [example('First essay title','essay-one'),example('Second essay title','essay-two')].map(item=>entry(item,'h3')).join('') : '<p class="empty-state">No essays uploaded.</p>'}</section></section><aside class="academic-sidebar"><figure class="portrait-wall"><div class="portrait-frame"><img src="${safeUrl(data.portrait)}" alt="${escape(data.name)}" width="800" height="800"></div><nav class="gallery-navigation" aria-label="Sections">${['Software','Projects','Newsletter','Ironclads','Blog'].map((name,i)=>`<a href="/${name.toLowerCase()}/" data-route><span class="room-number">0${i+2}</span><span>${name}</span><span aria-hidden="true">↗</span></a>`).join('')}</nav></figure></aside></div>`;
+const academic = `<div class="academic-layout"><section class="academic-content"><h1 class="sr-only">Academic</h1><section class="dissertation"><h2>Dissertation</h2>${dissertation ? entry(dissertation,'h3') : preview ? entry(example('Dissertation title','dissertation-example'),'h3') : '<p class="empty-state">Not uploaded.</p>'}</section><section class="essay-list"><h2>Selected essays</h2>${essays.length ? essays.map(item=>entry(item,'h3')).join('') : preview ? [example('First essay title','essay-one'),example('Second essay title','essay-two')].map(item=>entry(item,'h3')).join('') : '<p class="empty-state">No essays uploaded.</p>'}</section></section><aside class="academic-sidebar"><figure class="portrait-wall"><div class="portrait-frame"><img src="${safeUrl(data.portrait)}" alt="${escape(data.name)}" width="800" height="800"></div><nav class="gallery-navigation" aria-label="Sections">${['Projects','Newsletter','Ironclads','Blog'].map((name,i)=>`<a href="/${name.toLowerCase()}/" data-route><span class="room-number">0${i+2}</span><span>${name}</span><span aria-hidden="true">↗</span></a>`).join('')}</nav></figure></aside></div>`;
 if (preview) { fs.mkdirSync(output,{recursive:true}); for (const file of ['style.css','app.js','diagram.js']) fs.copyFileSync(`dist/${file}`,`${output}/${file}`); fs.cpSync('dist/assets',`${output}/assets`,{recursive:true}); }
-for (const page of ['academic','software','projects','newsletter','ironclads','blog']) {
+for (const page of ['academic','projects','newsletter','ironclads','blog']) {
  const title = page[0].toUpperCase()+page.slice(1);
  const items = page === 'academic' ? [] : visible(data[page]);
  const content = page === 'academic' ? academic : `<h1 class="sr-only">${title}</h1>${items.length ? items.map(item=>entry(item)).join('') : '<p class="empty-state">No posts published.</p>'}`;
@@ -29,4 +29,7 @@ for (const page of ['academic','software','projects','newsletter','ironclads','b
  const dir=page === 'academic' ? output : `${output}/${page}`;
  fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(`${dir}/index.html`,html);
 }
-console.log(`Built six pages in ${output}/`);
+console.log(`Built five pages in ${output}/`);
+
+fs.mkdirSync(`${output}/software`,{recursive:true});
+fs.writeFileSync(`${output}/software/index.html`,'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/projects/"><link rel="canonical" href="/projects/"><title>Projects</title></head><body><a href="/projects/">Projects</a></body></html>');

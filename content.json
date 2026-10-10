@@ -25,19 +25,6 @@
       }
     ]
   },
-  "software": [
-    {
-      "id": "data-browser",
-      "title": "Data Browser",
-      "summary": "A tool for searching and publishing structured collections. Researchers can inspect tables, filter records, and share results through a web interface or an API.",
-      "description": "It accepts common tabular formats and supports additional importers and visualisations through extensions."
-    },
-    {
-      "id": "collection-tools",
-      "title": "Collection Tools",
-      "summary": "Small utilities for converting research material into queryable tables, with repeatable import steps and a record of the original source."
-    }
-  ],
   "projects": [
     {
       "id": "machine-archive",
@@ -110,10 +97,6 @@
     {
       "label": "Projects: Thomas Mullaney",
       "url": "https://www.tsmullaney.com/"
-    },
-    {
-      "label": "Software: Datasette",
-      "url": "https://datasette.io/"
     },
     {
       "label": "Newsletter: Adam Tooze",
