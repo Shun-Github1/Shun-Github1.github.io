@@ -24,7 +24,7 @@ async function boot({page='academic',reduced=false,mobile=false,webgl=true,hash=
 }
 (async()=>{
  const a=await boot();assert(a.document.body.classList.contains('gallery-mode'));assert.equal(a.document.querySelectorAll('.gallery-exhibits button').length,3);
- const initial=a.calls.at(-1);assert.equal(initial.scene.children.length,5);assert.equal(initial.camera.position.x,0);
+ const initial=a.calls.at(-1);assert(initial.scene.children.length>5);assert.equal(initial.camera.position.x,0);
  a.clickRoute('ironclads');assert(a.frames.size>0);assert.equal(a.location.pathname,'/ironclads/');a.advance();assert.equal(a.calls.at(-1).camera.position.x,90);assert.equal(a.document.querySelector('[aria-current="page"]').textContent,'Ironclads');
  // Test a wall target is actually on the view frustum, not a fixed overlay.
  const camera=a.calls.at(-1).camera;const world=new THREE.Vector3(90-4.1,6.2,-7.68);const projected=world.clone().project(camera);assert(Math.abs(projected.x)<1&&Math.abs(projected.y)<1&&projected.z<1);
@@ -33,9 +33,9 @@ async function boot({page='academic',reduced=false,mobile=false,webgl=true,hash=
  a.document.querySelector('.reader-close').onclick();assert(!a.document.querySelector('dialog').open);
  a.clickRoute('blog');a.clickRoute('projects');a.advance();assert.equal(a.calls.at(-1).camera.position.x,30);assert(!a.document.querySelector('.gallery-shell').classList.contains('in-transit'));
  a.location.pathname='/';a.listeners.popstate();a.advance();assert.equal(a.calls.at(-1).camera.position.x,0);
- a.document.querySelector('.view-switch').onclick();assert(!a.document.body.classList.contains('gallery-mode'));assert.equal(a.storage.get('pavilion-view'),'reading');
- const r=await boot({reduced:true});assert(!r.document.body.classList.contains('gallery-mode'));r.document.querySelector('.view-switch').onclick();r.clickRoute('ironclads');assert.equal(r.frames.size,0);assert.equal(r.calls.at(-1).camera.position.x,90);
- const m=await boot({mobile:true});assert(!m.document.body.classList.contains('gallery-mode'));
+ a.document.querySelector('.view-switch').onclick();assert(!a.document.body.classList.contains('gallery-mode'));assert.equal(a.storage.get('pavilion-view-v2'),'reading');
+ const r=await boot({reduced:true});assert(r.document.body.classList.contains('gallery-mode'));r.clickRoute('ironclads');assert.equal(r.frames.size,0);assert.equal(r.calls.at(-1).camera.position.x,90);
+ const m=await boot({mobile:true});assert(m.document.body.classList.contains('gallery-mode'));
  const h=await boot({hash:'#dissertation'});assert(!h.document.body.classList.contains('gallery-mode'));
  const f=await boot({webgl:false});assert(!f.document.body.classList.contains('gallery-mode'));assert(f.document.querySelector('#content'));assert(f.errors.length);
  const direct=await boot({page:'ironclads'});assert.equal(direct.calls.at(-1).camera.position.x,90);

@@ -38,7 +38,7 @@ function boardTexture(i){return canvasTexture((c,w,h)=>{
  const items=roomItems(i);let y=125;
  if(i===0&&data.introduction){c.fillStyle='#eee9d8';c.font='54px Georgia';c.fillText(data.introduction.title||data.name,62,y);y+=55;c.fillStyle='#c5c9b7';c.font='28px Georgia';y=wrap(c,data.introduction.paragraphs?.[0],62,y,w-124,39,3)+20;}
  items.slice(0,i===0?2:3).forEach((item,index)=>{c.strokeStyle='#68735d';c.beginPath();c.moveTo(62,y);c.lineTo(w-62,y);c.stroke();y+=45;c.fillStyle='#ebe7d4';c.font='43px Georgia';y=wrap(c,item.title,62,y,w-124,51,2);c.fillStyle='#bdc4af';c.font='28px Georgia';y=wrap(c,item.summary,62,y+7,w-124,40,2)+36;});
-
+ c.fillStyle='#bec2ad';c.font='22px sans-serif';c.fillText('Select this wall to read',62,h-38);
  });}
 function drawing(i){return canvasTexture((c,w,h)=>{c.lineWidth=2;c.strokeStyle='#b0b69b';c.fillStyle='#dcdcc5';c.font='24px serif';c.fillText(['ARCHIVE / PLATE I','WRITING MACHINES','THE PRINTED PAGE','NAVAL STUDIES / PLATE IV','WORKING PAPERS'][i],45,55);
  const seg=(p)=>{c.beginPath();p.forEach(([x,y],j)=>j?c.lineTo(x,y):c.moveTo(x,y));c.stroke()};
@@ -52,26 +52,15 @@ function drawing(i){return canvasTexture((c,w,h)=>{c.lineWidth=2;c.strokeStyle='
  },1200,900)}
 function buildRoom(i){const g=new THREE.Group();g.position.x=i*SPACING;scene.add(g);roomGroups.push(g);
  box(29,.15,22,0,-.1,2,g,0x222820);box(29,13,.2,0,6.4,-8,g,0x293026);
-
- // Connected vaulted rooms, modelled after the original pencil pavilion.
- box(30,.15,34,0,-.12,8,g,0x242620);
- for(const x of [-15,15]){
-  for(const z of [-7,23]){
-   box(.32,13,.32,x,6.5,z,g,0x292b25);
-   for(const [y,w,h] of [[.25,.95,.5],[.65,.7,.18],[1,.5,.14],[12.6,.55,.15],[13,.9,.22]])box(w,h,w,x,y,z,g);
-   for(const dx of [-.21,.21])line([[x+dx,1,z+.2],[x+dx,12.6,z+.2]],g);
-  }
-  for(const offset of [0,.16]){const pts=[];for(let k=0;k<=64;k++){const t=Math.PI*k/64;pts.push([x+offset,13+9*Math.sin(t),8-15*Math.cos(t)]);}line(pts,g);}
- }
- for(const z of [-7,8,23]){const pts=[];for(let k=0;k<=48;k++){const t=Math.PI*k/48;pts.push([-15+30*k/48,13+(z===8?9:6)*Math.sin(t),z]);}line(pts,g,faintMat);}
- for(const side of [-1,1])line([[-15,13,8+side*15],[0,22,8],[15,13,8-side*15]],g,faintMat);
- for(let x=-15;x<=15;x+=5)line([[x,.02,-8],[x,.02,25]],g,faintMat);
- for(let z=-6;z<=25;z+=5)line([[-15,.02,z],[15,.02,z]],g,faintMat);
- box(29,.14,.4,0,12,-7.7,g);box(29,.14,.35,0,.6,-7.7,g);
- box(5.3,6,.6,10,3.2,-6.8,g,0x252822);
- for(let y=.5;y<=6;y+=1.1){box(5.4,.09,.8,10,y,-6.5,g);for(let j=0;j<16;j++){const xx=7.5+j*.31;const ht=.58+((j*7+Math.round(y*10))%5)*.07;box(.22,ht,.3,xx,y+.12+ht/2,-6.38,g,0x2b2e27);}}
+ // Rear wall pilasters, cornices and a genuinely vaulted wire roof.
+ box(29,.12,.35,0,10.7,-7.8,g);box(29,.1,.35,0,.7,-7.8,g);
+ for(const x of [-14,14]){for(const z of [-7.4,5.5]){box(.28,8.8,.28,x,4.4,z,g);box(.65,.25,.65,x,.2,z,g);box(.58,.18,.58,x,8.9,z,g);}
+ line([[x,0,-7.4],[x,0,11]],g,faintMat);}
+ for(const z of [-7.4,-1,5.5]){const pts=[];for(let s=0;s<=48;s++){const a=Math.PI*s/48;pts.push([-14*Math.cos(a),8.9+4*Math.sin(a),z]);}line(pts,g);}
+ for(let x=-12;x<=12;x+=3){const yy=8.9+4*Math.sqrt(1-(x/14)**2);line([[x,yy,-7.4],[x,yy,5.5]],g,faintMat);}
+ for(let x=-14;x<15;x+=3.5)line([[x,.02,-8],[x,.02,13]],g,faintMat);for(let z=-6;z<14;z+=3)line([[-14,.02,z],[14,.02,z]],g,faintMat);
  const board=plate(boardTexture(i),15,11.25,-4.1,6.2,-7.68,g);board.userData={room:i,kind:'read'};picked.push(board);boardMeshes.push(board);
- const art=plate(drawing(i),5.6,4.2,8.7,9.1,-7.65,g);art.userData={room:i,kind:'read'};picked.push(art);
+ const art=plate(drawing(i),6.8,5.1,7.7,7.1,-7.65,g);art.userData={room:i,kind:'read'};picked.push(art);
  if(i===0){art.scale.x=.75;new THREE.TextureLoader().load(data.portrait,t=>{t.colorSpace=THREE.SRGBColorSpace;art.material.map=t;art.material.needsUpdate=true;textures.push(t);render()});}
  // Small physical exhibits provide clear parallax during camera travel.
  if(i===3)ship(g);else if(i===1)machine(g);else if(i===0||i===4)books(g);else papers(g);
@@ -81,19 +70,19 @@ function machine(g){box(5,.25,2.8,7.5,1.3,-2,g);box(3.6,.7,1.8,7.5,1.85,-2,g);bo
 function books(g){box(5,.2,2,7.5,1.3,-2,g);for(let j=0;j<7;j++)box(.37,1.1+(j%3)*.2,1,6+j*.43,2,-2,g,0x30372c);}
 function papers(g){box(5,.2,2.4,7.5,1.3,-2,g);for(let j=0;j<4;j++)box(2.7,.06,1.6,7.5+j*.07,1.5+j*.08,-2,g,0x3a4031);}
 function render(){if(renderer&&enabled)renderer.render(scene,camera)}
-const pose=i=>({position:new THREE.Vector3(i*SPACING,5.8,narrow.matches?32:20),target:new THREE.Vector3(i*SPACING-1,5.4,-7)});
+const pose=i=>({position:new THREE.Vector3(i*SPACING,5.8,narrow.matches?28:13),target:new THREE.Vector3(i*SPACING-1,5.4,-7)});
 function setPose(p){camera.position.copy(p.position);camera.lookAt(p.target);camera.updateMatrixWorld();}
 function resize(){if(!renderer)return;const w=shell.clientWidth||innerWidth,h=shell.clientHeight||innerHeight-88;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();if(!animation)setPose(pose(active));render()}
 function updateUI(){document.body.dataset.page=ROOMS[active];document.title=`${LABELS[active]} — ${data.name}`;document.querySelectorAll('header nav a').forEach(a=>{a.removeAttribute('aria-current');if(new URL(a.href).pathname===pathFor(active))a.setAttribute('aria-current','page')});status.textContent=`${String(active+1).padStart(2,'0')} / ${LABELS[active]}`;read.textContent=`Read ${LABELS[active]}`;exhibits.replaceChildren();roomItems(active).forEach(item=>{const b=document.createElement('button');b.textContent=item.title;b.onclick=()=>openReader(item.id);exhibits.append(b)});}
 function navigate(i,push=true){if(i===active&&!animation)return;const old=active;active=i;if(push)history.pushState({room:ROOMS[i]},'',pathFor(i));updateUI();if(reduced.matches){animation=null;cancelAnimationFrame(raf);shell.classList.remove('in-transit');setPose(pose(i));render();return;}
- const from={position:camera.position.clone(),target:new THREE.Vector3(old*SPACING-1,5.4,-7)};const to=pose(i);const retreat=new THREE.Vector3(from.position.x+(to.position.x-from.position.x)*.33,5.8,20);const approach=new THREE.Vector3(from.position.x+(to.position.x-from.position.x)*.67,5.8,20);const curve=new THREE.CatmullRomCurve3([from.position,retreat,approach,to.position],false,'catmullrom',.3);
- animation={start:performance.now(),from,to,curve,duration:1900+Math.abs(i-old)*160};shell.classList.add('in-transit');cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);
+ const from={position:camera.position.clone(),target:new THREE.Vector3(old*SPACING-1,5.4,-7)};const to=pose(i);const retreat=new THREE.Vector3(from.position.x,6.4,25);const approach=new THREE.Vector3(to.position.x,6.4,25);const curve=new THREE.CatmullRomCurve3([from.position,retreat,approach,to.position],false,'catmullrom',.3);
+ animation={start:performance.now(),from,to,curve,duration:1000+Math.abs(i-old)*100};shell.classList.add('in-transit');cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);
 }
 function tick(now){if(!animation||!enabled)return;const a=animation;const t=Math.min(1,(now-a.start)/a.duration);const e=t*t*(3-2*t);camera.position.copy(a.curve.getPoint(e));camera.lookAt(a.from.target.clone().lerp(a.to.target,e));render();if(t<1)raf=requestAnimationFrame(tick);else{setPose(a.to);animation=null;shell.classList.remove('in-transit');render();}}
 function appendText(tag,text,parent){const el=document.createElement(tag);el.textContent=text||'';parent.append(el);return el}
 function openReader(id){lastFocus=document.activeElement;reader.replaceChildren();appendText('h2',LABELS[active],reader).id='reader-title';if(active===0&&!id&&data.introduction){appendText('h3',data.introduction.title,reader);data.introduction.paragraphs.forEach(p=>appendText('p',p,reader));}const items=roomItems(active);for(const item of items){if(id&&item.id!==id)continue;const article=document.createElement('article');appendText('h3',item.title,article);if(item.year||item.date)appendText('p',item.year||item.date,article).className='meta';[item.summary,item.description,...(item.paragraphs||[])].filter(Boolean).forEach(p=>appendText('p',p,article));for(const link of item.links||[]){if(!/^(https?:\/\/|\/(?!\/)|mailto:)/i.test(link.url))continue;const a=appendText('a',link.label,article);a.href=link.url;article.append(document.createTextNode(' '));}reader.append(article);}if(data.sampleSources){const details=document.createElement('details');details.className='gallery-sample';appendText('summary','Sample text · sources',details);appendText('p','Fictionalised text for layout review.',details);data.sampleSources.forEach(s=>{const a=appendText('a',s.label,details);a.href=s.url;details.append(document.createElement('br'));});reader.append(details);}dialog.showModal();}
 function stored(key){try{return localStorage.getItem(key)}catch{return null}}
-function remember(value){try{localStorage.setItem('pavilion-view',value)}catch{}}
+function remember(value){try{localStorage.setItem('pavilion-view-v2',value)}catch{}}
 function enable(){enabled=true;document.body.classList.add('gallery-mode');mode.textContent='Reading view';remember('3d');resize();updateUI();render();}
 function disable(){enabled=false;cancelAnimationFrame(raf);animation=null;document.body.classList.remove('gallery-mode');mode.textContent='Enter 3D pavilion';remember('reading');if(active!==fallbackPage)location.assign(pathFor(active));}
 read.onclick=()=>openReader();mode.onclick=()=>enabled?disable():enable();
@@ -104,10 +93,12 @@ addEventListener('resize',resize);reduced.addEventListener('change',()=>{if(redu
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&animation){animation=null;cancelAnimationFrame(raf);shell.classList.remove('in-transit');setPose(pose(active));}if(!document.hidden)render()});
 try{
  const response=await fetch('/gallery-content.json');if(!response.ok)throw Error('Content unavailable');data=await response.json();
- renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setClearColor(0x242620);renderer.domElement.setAttribute('aria-label','Five vaulted exhibition rooms with framed wall displays');renderer.domElement.setAttribute('role','img');shell.prepend(renderer.domElement);
- scene=new THREE.Scene();scene.fog=new THREE.Fog(0x242620,55,180);camera=new THREE.PerspectiveCamera(45,1,.1,240);ROOMS.forEach((_,i)=>buildRoom(i));
+ renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setClearColor(0x202420);renderer.domElement.setAttribute('aria-label','Five vaulted exhibition rooms with framed wall displays');renderer.domElement.setAttribute('role','img');shell.prepend(renderer.domElement);
+ scene=new THREE.Scene();scene.fog=new THREE.Fog(0x202420,38,105);camera=new THREE.PerspectiveCamera(45,1,.1,240);ROOMS.forEach((_,i)=>buildRoom(i));
+ // Connect the bays with a continuous colonnade and floor.
+ box(ROOMS.length*SPACING,.12,10,60,-.15,18,scene,0x232a22);for(let x=-14;x<136;x+=5)line([[x,0,12],[x,0,23]],scene,faintMat);for(const z of [13,18,23])line([[-14,0,z],[136,0,z]],scene,faintMat);
  const raycaster=new THREE.Raycaster();const pointer=new THREE.Vector2();function hit(event){const rect=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);return raycaster.intersectObjects(picked).find(h=>h.object.userData.room===active)}
  renderer.domElement.addEventListener('pointermove',e=>{renderer.domElement.style.cursor=!animation&&hit(e)?'pointer':'default'});renderer.domElement.addEventListener('click',e=>{if(!animation&&hit(e))openReader()});
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();disable();mode.hidden=true;});
- mode.hidden=false;const preference=stored('pavilion-view');if(!location.hash&&(preference==='3d'||(preference!=='reading'&&!reduced.matches&&!narrow.matches)))enable();else{setPose(pose(active));updateUI();}
+ mode.hidden=false;const preference=stored('pavilion-view-v2');if(!location.hash&&preference!=='reading')enable();else{setPose(pose(active));updateUI();}
 }catch(error){console.warn('Pavilion unavailable; reading view retained.',error);enabled=false;document.body.classList.remove('gallery-mode');shell.remove();mode.hidden=true;renderer?.dispose();}
