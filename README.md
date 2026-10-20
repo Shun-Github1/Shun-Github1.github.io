@@ -32,3 +32,13 @@ For an unpublished layout demonstration with sample dissertation and essay entri
 
 Commit and push content.json, templates, assets and styling. GitHub Actions regenerates all five pages and publishes them automatically. The Academic page is the homepage. The source photo and materials are public when pushed.
 `nNewsletter and Ironclads are independent lists in content.json. sampleSources controls the collapsed attribution note; remove it when replacing the fictionalised design samples with original material. Previous content is retained in drafts/content-before-samples.json.
+
+## 3D pavilion
+
+The five sections share a Three.js scene in `dist/gallery.js`. It contains real meshes, line geometry, a perspective camera and preset paths between five exhibition bays. Each bay has a wall text panel generated from `content.json`, a subject drawing and a small physical exhibit. Ironclads contains an original schematic ship drawing and a simple extruded hull, funnels, mast and rigging. The drawing is not a reconstruction of a named vessel.
+
+Desktop opens in the 3D view unless Reading view was selected. Mobile and reduced-motion users start in Reading view and can explicitly enter the pavilion. Reduced motion removes travel animation. Missing WebGL leaves the normal static pages usable. A page hash also retains the reading page. The main navigation supports direct URLs, browser Back, and movement between rooms without reloading. Select a wall, an exhibit title, or Read to open full text. The scene renders on interaction rather than running an idle animation loop.
+
+The renderer is vendored in `dist/vendor` (Three.js 0.180.0, MIT licence included), so publishing needs no CDN or package download. `npm ci` installs local test dependencies; `npm test` exercises the navigation logic against a simulated DOM using real Three.js geometry and camera math. The renderer itself is mocked in those tests: they do not verify WebGL pixels. `npm run build` generates all five pages and the shared gallery content.
+
+For camera framing, edit `pose`; for room spacing, `SPACING`; for exhibits, `buildRoom`, `drawing`, and the prop functions. To change the wall texts, edit `content.json` and rebuild.
