@@ -125,7 +125,7 @@
     {
       "id": "history-evals",
       "title": "History Evals",
-      "summary": "The banality of evil: harm often depends on routine administration—maintaining records, processing references or designing workflows.",
+      "summary": "Does LLM safety alignment still work in scenarios based on real events, rather than purely hypothetical situations?",
       "links": [
         {
           "label": "Explore cases and evidence",
@@ -139,7 +139,7 @@
       "image": "/assets/history-evals.svg",
       "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses",
       "imageKind": "feature uncropped",
-      "description": "Building on Andrew B. Hall’s Dictatorship Eval, this pilot tests two AI models on 100 workplace assignments drawn from historical cases of surveillance, discrimination and corporate misconduct.",
+      "description": "Building on Andrew B. Hall’s Dictatorship Eval, this pilot examines the “banality of evil” through 100 workplace assignments drawn from historical cases of surveillance, discrimination and corporate misconduct, tested on two AI models.",
       "metrics": [
         [
           "100",
