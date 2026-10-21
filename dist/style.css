@@ -35,3 +35,22 @@ header,main,footer{max-width:1200px}main{padding-top:36px}.profile-section{margi
 .content-entry.has-image:not(.app)>.entry-image,.entry-gallery img{object-fit:cover;background:transparent;border:0;border-radius:0;aspect-ratio:16/9}
 .content-entry.has-image.uncropped>.entry-image,.content-entry.uncropped .entry-gallery img{height:auto;aspect-ratio:auto;object-fit:contain;background:transparent}
 .content-entry.app>.entry-image,.content-entry.app .entry-gallery img{height:auto;aspect-ratio:auto;object-fit:contain;background:transparent}
+
+/* Media remain subordinate to the writing at every desktop resolution. */
+.content-entry.feature>.entry-image{max-width:720px;max-height:405px;justify-self:start}
+.content-entry .entry-gallery{width:100%;max-width:720px!important}
+.content-entry .entry-gallery img{max-height:405px}
+.content-entry.has-image.uncropped>.entry-image,.content-entry.uncropped .entry-gallery img{max-width:640px;max-height:none}
+.content-entry.has-image.research>.entry-image{max-width:250px;max-height:320px;object-fit:contain}
+.content-entry.has-image.research:not(.uncropped)>.entry-image{object-fit:cover}
+.published-letters .content-entry.has-image{grid-template-columns:220px minmax(0,1fr);gap:28px}
+.published-letters .entry-image{max-width:220px}
+.entry-video{grid-column:1/-1;width:100%;max-width:720px;margin:28px 0 0}
+.entry-video video{display:block;width:100%;height:auto;max-height:405px;background:#161b19}
+.entry-video figcaption{font:.8rem/1.5 var(--small);color:var(--muted);margin-top:10px}
+@media(max-width:700px){
+ .content-entry.has-image.research>.entry-image,.published-letters .entry-image{max-width:100%;max-height:none}
+ .content-entry .entry-gallery img{max-height:none}
+ .content-entry.app>.entry-gallery{max-width:none!important}
+ .entry-video{margin-top:22px}
+}
