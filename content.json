@@ -227,15 +227,14 @@
       "id": "ironclads",
       "title": "Ironclads: Admiral and Commander",
       "publication": "Game · In development",
-      "summary": "Thank you very much for your support of my little historical project. There has yet to be a global real-time naval game celebrating the period of Steam and Steel - the age of ironclads. Soon that will no longer be the case.",
+      "summary": "A real-time naval game in development, focused on the ironclad era between the age of sail and the emergence of dreadnoughts.",
       "paragraphs": [
-        "Ironclads aims to address this gap in the popular imagination that exists between age of sail vessels on the one hand, and dreadnoughts on the other. This is a time of rapid change - of propulsion, from wind to steam, of materials, from wood to iron and to steel, and of tactics, from broadsides, to ramming, then back again.",
-        "The onset of modernity at sea is also a story of epic battles, innovations, and above all courage.",
-        "As a game, Ironclads aims for realism - truly historical tiers of command from admiral to turret officer, accurate fleet-level tactics, and believable AI. After all, history always balanced itself out eventually. But more to the point, accurately reproducing history is, I believe, an end unto itself."
+        "The design aims to combine historically grounded fleet tactics, command roles from admiral to turret officer, and believable AI."
       ],
       "video": "/assets/ironclads/kotetsu.mp4",
       "videoCaption": "Kōtetsu — development footage.",
-      "videoPoster": "/assets/ironclads/kotetsu.jpg"
+      "videoPoster": "/assets/ironclads/kotetsu.jpg",
+      "description": "Ironclads aims to bring academic research to a wider audience through play, exploring an underrepresented period of naval history as steam propulsion, iron and steel transformed warfare at sea."
     }
   ],
   "introduction": {
