@@ -45,53 +45,46 @@
   },
   "projects": [
     {
-      "id": "machine-archive",
-      "title": "The Writing Machine Archive",
-      "year": "2024–2025",
-      "summary": "A digital exhibition tracing the development of mechanical writing across different languages.",
-      "description": "The collection combines photographs, object descriptions, and archival material to explain how designers addressed scripts that could not be accommodated by a conventional alphabetic keyboard."
-    },
-    {
-      "id": "public-catalogue",
-      "title": "A Public Catalogue",
-      "year": "2023–2024",
-      "summary": "An illustrated collection of objects and documents organised by their use, provenance, and historical setting."
-    }
-  ],
-  "blog": [
-    {
-      "id": "simulation",
-      "title": "What a Strategy Game Chooses to Represent",
-      "date": "18 September 2024",
-      "summary": "Historical games reach large audiences, but their rules select which parts of the past a player can see.",
-      "paragraphs": [
-        "A useful reading begins with those choices. Combat, political institutions, and economic resources do not receive equal attention; each is translated into a different set of decisions. Examining that translation offers a way to discuss both the game and the historical interpretation it presents."
+      "id": "history-evals",
+      "title": "History Evals",
+      "summary": "Evaluating how AI models respond to workplace assignments reconstructed from historical cases of institutional harm.",
+      "links": [
+        {
+          "label": "View project",
+          "url": "https://history-evals.github.io/"
+        }
       ]
     },
     {
-      "id": "archive-notes",
-      "title": "An Object Is Not Its Catalogue Entry",
-      "date": "4 September 2024",
-      "summary": "A catalogue makes an object findable. It also compresses its history into a small number of fields. The gap between those two functions deserves attention."
+      "id": "steam-and-steel",
+      "title": "Steam and Steel",
+      "summary": "A late-Victorian total-conversion mod for Medieval II: Total War: Kingdoms.",
+      "links": [
+        {
+          "label": "ModDB: description and downloads",
+          "url": "https://www.moddb.com/mods/steam-and-steel-total-war"
+        }
+      ]
     }
   ],
   "newsletter": [
     {
-      "id": "dispatch",
-      "title": "The Weekly Dispatch",
-      "summary": "A fortnightly letter on economic history and public affairs, combining a short argument with charts and a reading list."
+      "id": "newsletter",
+      "title": "Newsletter",
+      "summary": "A news app I developed to help readers explore reporting from different perspectives.",
+      "links": [
+        {
+          "label": "Visit Newsletter",
+          "url": "https://www.newsletter-media.com/"
+        }
+      ]
     },
     {
-      "id": "issue-one",
-      "title": "When Energy Becomes a Security Question",
-      "date": "12 September 2024",
-      "summary": "How disruptions to supply change the relationship between emergency spending, industrial policy, and longer-term investment."
-    },
-    {
-      "id": "issue-two",
-      "title": "The Infrastructure behind a Market",
-      "date": "29 August 2024",
-      "summary": "A look at the institutions that allow a financial market to function, and what becomes visible when liquidity disappears."
+      "id": "meerkat",
+      "title": "Meerkat",
+      "summary": "The backend pipeline for Newsletter. It collects, translates and analyses articles, then prepares them for publication in the app.",
+      "description": "Scheduled AWS Fargate tasks process the articles. PostgreSQL stores the results, and a Flask API serves the published material.",
+      "architecture": true
     }
   ],
   "ironclads": [
@@ -109,15 +102,7 @@
   ],
   "sampleSources": [
     {
-      "label": "Projects: Thomas Mullaney",
-      "url": "https://www.tsmullaney.com/"
-    },
-    {
-      "label": "Newsletter: Adam Tooze",
-      "url": "https://adamtooze.com/"
-    },
-    {
-      "label": "Ironclads and Blog: Bret Devereaux",
+      "label": "Ironclads: Bret Devereaux",
       "url": "https://acoup.blog/"
     }
   ],
