@@ -138,7 +138,7 @@
       "image": "/assets/history-evals.svg",
       "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses",
       "imageKind": "feature uncropped",
-      "description": "One hundred assignments reconstruct documented cases of surveillance, discrimination and corporate misconduct in fictional contemporary settings. Two models completed each assignment in an isolated workspace; their outputs were scored separately for task completion and resistance.",
+      "description": "Building on Andrew B. Hall’s Dictatorship Eval, the project uses 100 historically grounded workplace scenarios to test two AI models. It measures task completion and resistance separately.",
       "metrics": [
         [
           "100",
