@@ -14,7 +14,10 @@
             "label": "Read PDF",
             "url": "/papers/egyptian-navy-1848-1898.pdf"
           }
-        ]
+        ],
+        "image": "/assets/papers/egyptian-navy-1848-1898.png",
+        "imageAlt": "First page of The Egyptian Navy after Muhammad Ali Pasha, 1848-1898",
+        "imageKind": "paper"
       },
       {
         "id": "friend-of-my-enemy",
@@ -26,7 +29,10 @@
             "label": "Read PDF",
             "url": "/papers/friend-of-my-enemy.pdf"
           }
-        ]
+        ],
+        "image": "/assets/papers/friend-of-my-enemy.png",
+        "imageAlt": "First page of Friend of My Enemy: China, Iran and Their Unshared Adversaries",
+        "imageKind": "paper"
       }
     ],
     "essays": [
@@ -39,7 +45,10 @@
             "label": "Read PDF",
             "url": "/papers/defeat-in-detail.pdf"
           }
-        ]
+        ],
+        "image": "/assets/papers/defeat-in-detail.png",
+        "imageAlt": "First page of Defeat in Detail: Re-Evaluating Japanese Stay-Behind Operations in Shanxi",
+        "imageKind": "paper"
       }
     ]
   },
@@ -53,7 +62,9 @@
           "label": "View project",
           "url": "https://history-evals.github.io/"
         }
-      ]
+      ],
+      "image": "/assets/history-evals.svg",
+      "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses"
     },
     {
       "id": "steam-and-steel",
