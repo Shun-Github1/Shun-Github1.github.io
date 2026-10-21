@@ -195,8 +195,7 @@
       "gallery": [
         {
           "src": "/assets/projects/newsletter-reading.webp",
-          "alt": "Newsletter app displaying sentiment, subjectivity, key quotations and related news",
-          "caption": "Article analysis, quotations and related reporting."
+          "alt": "Newsletter app displaying sentiment, subjectivity, key quotations and related news"
         }
       ],
       "features": [
