@@ -54,3 +54,7 @@ header,main,footer{max-width:1200px}main{padding-top:36px}.profile-section{margi
  .content-entry.app>.entry-gallery{max-width:none!important}
  .entry-video{margin-top:22px}
 }
+/* Keep the paired phone screenshots in their own desktop columns. */
+.content-entry.app>.entry-gallery{width:47%;max-width:225px!important}
+@media(max-width:850px){.content-entry.app>.entry-gallery{width:100%}}
+@media(max-width:700px){.content-entry.app>.entry-gallery{max-width:none!important}}
