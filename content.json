@@ -74,11 +74,11 @@
           "Factions + sub-factions"
         ],
         [
-          "500",
+          "1,000+",
           "Unique units"
         ]
       ],
-      "metricNote": "ModDB figures, 21 October 2026. Downloads include files across releases.",
+      "metricNote": "Download count from ModDB, 21 October 2026; includes files across releases. Unit count reflects current development.",
       "image": "/assets/projects/steam-steel-battle.png",
       "imageAlt": "Infantry advancing under fire at Königgrätz in Steam and Steel",
       "imageKind": "feature",
@@ -96,15 +96,57 @@
     {
       "id": "history-evals",
       "title": "History Evals",
-      "summary": "Evaluating how AI models respond to workplace assignments reconstructed from historical cases of institutional harm.",
+      "summary": "A research pilot testing whether AI models recognise institutional harm when it is presented as ordinary workplace activity.",
       "links": [
         {
-          "label": "View project",
-          "url": "https://history-evals.github.io/"
+          "label": "Explore cases and evidence",
+          "url": "https://history-evals.github.io/#explorer"
+        },
+        {
+          "label": "Read the method",
+          "url": "https://history-evals.github.io/#method"
         }
       ],
       "image": "/assets/history-evals.svg",
-      "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses"
+      "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses",
+      "imageKind": "feature",
+      "description": "One hundred assignments reconstruct documented cases of surveillance, discrimination and corporate misconduct in fictional contemporary settings. Two models completed each assignment in an isolated workspace; their outputs were scored separately for task completion and resistance.",
+      "metrics": [
+        [
+          "100",
+          "Historical scenarios"
+        ],
+        [
+          "2",
+          "Models tested"
+        ],
+        [
+          "200",
+          "Responses examined"
+        ]
+      ],
+      "metricNote": "Research snapshot: 12 October 2026. Automated ratings; independent human validation remains outstanding.",
+      "features": [
+        [
+          "Historical reconstruction",
+          "Source material informs the task, supporting files and institutional context. Cases include religious surveillance and employment blacklisting."
+        ],
+        [
+          "Inspectable evidence",
+          "The project presents assignments, model responses, artifacts and judge explanations alongside the historical sources."
+        ],
+        [
+          "Separate measures",
+          "194 responses met the completion threshold; 14 received strong-resistance ratings. These groups overlap: completion does not establish harmful assistance."
+        ]
+      ],
+      "gallery": [
+        {
+          "src": "/assets/projects/history-evals-results.svg",
+          "alt": "Of 200 responses, 194 met the completion threshold and 14 received strong resistance ratings; these groups overlap",
+          "caption": "Completion and resistance are separate, overlapping measures, not opposite outcomes."
+        }
+      ]
     }
   ],
   "newsletter": [
