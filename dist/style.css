@@ -30,3 +30,8 @@ header,main,footer{max-width:1200px}main{padding-top:36px}.profile-section{margi
 @media(max-width:360px){.content-entry.app>.entry-image,.app>.entry-gallery img{height:270px}.project-metrics{grid-template-columns:1fr 1fr}}
 
 .publication{font:.85rem/1.5 var(--small);color:#d0d7c3;margin-bottom:8px}.published-letters{margin-top:48px}.published-letters .content-entry{padding:24px 0}.published-letters .entry-copy{max-width:75ch}.published-letters .entry-copy h3{font-size:1.55rem}
+
+/* Crop illustrations; preserve complete charts, maps and app screens. */
+.content-entry.has-image:not(.app)>.entry-image,.entry-gallery img{object-fit:cover;background:transparent;border:0;border-radius:0;aspect-ratio:16/9}
+.content-entry.has-image.uncropped>.entry-image,.content-entry.uncropped .entry-gallery img{height:auto;aspect-ratio:auto;object-fit:contain;background:transparent}
+.content-entry.app>.entry-image,.content-entry.app .entry-gallery img{height:auto;aspect-ratio:auto;object-fit:contain;background:transparent}

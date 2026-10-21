@@ -32,7 +32,7 @@
         ],
         "image": "/assets/papers/china-voting.png",
         "imageAlt": "Comparison of Chinese voting alignment with Middle Eastern states at the UN General Assembly",
-        "imageKind": "research"
+        "imageKind": "research uncropped"
       }
     ],
     "essays": [
@@ -48,7 +48,7 @@
         ],
         "image": "/assets/papers/shanxi-map.png",
         "imageAlt": "Historical map of the Battle of Jinzhong in Shanxi",
-        "imageKind": "research"
+        "imageKind": "research uncropped"
       }
     ],
     "letters": [
@@ -137,7 +137,7 @@
       ],
       "image": "/assets/history-evals.svg",
       "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses",
-      "imageKind": "feature",
+      "imageKind": "feature uncropped",
       "description": "One hundred assignments reconstruct documented cases of surveillance, discrimination and corporate misconduct in fictional contemporary settings. Two models completed each assignment in an isolated workspace; their outputs were scored separately for task completion and resistance.",
       "metrics": [
         [
@@ -224,21 +224,11 @@
   ],
   "ironclads": [
     {
-      "id": "naval-study",
-      "title": "Fleets, Trade and State Power",
-      "summary": "A study of naval power as an economic system: ships depend on finance, ports, supply networks, and the institutions that maintain them.",
-      "description": "The material is organised around fleet construction, commercial routes, and the relationship between military commitments and available resources."
-    },
-    {
-      "id": "fleet-records",
-      "title": "Fleet Records",
-      "summary": "Comparative notes on ships and the societies that built them, arranged as short entries with supporting references."
-    }
-  ],
-  "sampleSources": [
-    {
-      "label": "Ironclads: Bret Devereaux",
-      "url": "https://acoup.blog/"
+      "id": "ironclads",
+      "title": "Ironclads",
+      "publication": "Game · In development",
+      "summary": "Ironclads is a game I am developing to bring historical research to a wider audience.",
+      "description": "The project explores games as a way for people to engage with history beyond academic writing."
     }
   ],
   "introduction": {
