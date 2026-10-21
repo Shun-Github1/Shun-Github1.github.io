@@ -50,6 +50,34 @@
         "imageAlt": "Historical map of the Battle of Jinzhong in Shanxi",
         "imageKind": "research"
       }
+    ],
+    "letters": [
+      {
+        "id": "ukraine-history",
+        "title": "Ukraine war: 3 common mistakes to avoid when learning from history",
+        "date": "28 January 2023",
+        "publication": "South China Morning Post · Letter",
+        "summary": "On moral simplification, historical context and the limits of analogy when interpreting the war in Ukraine.",
+        "links": [
+          {
+            "label": "Read at SCMP",
+            "url": "https://www.scmp.com/comment/letters/article/3208141/ukraine-war-three-common-mistakes-avoid-when-learning-history"
+          }
+        ]
+      },
+      {
+        "id": "sri-lanka-populism",
+        "title": "Sri Lankan crisis is a cautionary tale about the dangers of authoritarian populism",
+        "date": "2 August 2022",
+        "publication": "South China Morning Post · Letter",
+        "summary": "On ethnic division, concentrated political power and the institutional failures behind Sri Lanka’s crisis.",
+        "links": [
+          {
+            "label": "Read at SCMP",
+            "url": "https://www.scmp.com/comment/letters/article/3187284/sri-lankan-crisis-cautionary-tale-about-dangers-authoritarian"
+          }
+        ]
+      }
     ]
   },
   "projects": [
