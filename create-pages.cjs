@@ -19,7 +19,7 @@ const dissertations = visible(data.academic.dissertations || (data.academic.diss
 const essays = visible(data.academic.essays);
 const academic = `<section class="profile-section"><div class="self-introduction"><h1>${escape(data.name)}</h1>${data.introduction.paragraphs.map(p=>`<p>${escape(p)}</p>`).join('')}<a class="profile-contact" href="mailto:${escape(data.email)}">${escape(data.email)}</a></div><aside class="academic-sidebar"><div class="portrait-frame"><img class="profile-photo" src="${safeUrl(data.portrait)}" alt="${escape(data.name)}" width="800" height="800"></div></aside></section><section class="works-section" id="research"><h2>Research</h2>${[...dissertations,...essays].map(item=>entry(item,'h3')).join('')}</section>${data.academic.letters?.length ? `<section class="works-section published-letters" id="published-letters"><h2>Published letters</h2>${visible(data.academic.letters).map(item=>entry(item,'h3')).join('')}</section>` : ''}`;
 
-if (preview) { fs.mkdirSync(output,{recursive:true}); for (const file of ['style.css','app.js','diagram.js','gallery.css','gallery.js']) fs.copyFileSync(`dist/${file}`,`${output}/${file}`); fs.cpSync('dist/assets',`${output}/assets`,{recursive:true}); fs.cpSync('dist/vendor',`${output}/vendor`,{recursive:true}); }
+if (preview) { fs.mkdirSync(output,{recursive:true}); for (const file of ['style.css','theme.js','app.js','diagram.js','gallery.css','gallery.js']) fs.copyFileSync(`dist/${file}`,`${output}/${file}`); fs.cpSync('dist/assets',`${output}/assets`,{recursive:true}); fs.cpSync('dist/vendor',`${output}/vendor`,{recursive:true}); }
 const roomPages={};
 for (const page of ['academic','projects','newsletter','ironclads']) {
  const title = page[0].toUpperCase()+page.slice(1);
