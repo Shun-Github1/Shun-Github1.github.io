@@ -76,7 +76,7 @@ header,main,footer{max-width:1200px}main{padding-top:36px}.profile-section{margi
 
 /* Keep the heading first and the phone pair secondary, including at browser zoom. */
 main>.content-entry.app:first-of-type{padding:28px;border-top:1px solid #aab49b30}
-.content-entry.app{grid-template-columns:minmax(0,1fr) 240px;gap:28px}
-.content-entry.app>.app-media{max-width:240px;align-self:center}
+.content-entry.app{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,3vw,40px)}
+.content-entry.app>.app-media{width:100%;max-width:400px;gap:clamp(10px,1.5vw,20px);align-self:center}
 .app-media figcaption{display:none}
-@media(max-width:650px){main>.content-entry.app:first-of-type{padding:20px}.content-entry.app{grid-template-columns:minmax(0,1fr);gap:24px}.content-entry.app>.app-media{max-width:220px;justify-self:start}}
+@media(max-width:650px){main>.content-entry.app:first-of-type{padding:20px}.content-entry.app{grid-template-columns:minmax(0,1fr);gap:24px}.content-entry.app>.app-media{width:80%;max-width:320px;justify-self:center}}
