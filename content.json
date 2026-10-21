@@ -15,9 +15,9 @@
             "url": "/papers/egyptian-navy-1848-1898.pdf"
           }
         ],
-        "image": "/assets/papers/egyptian-navy-1848-1898.png",
-        "imageAlt": "First page of The Egyptian Navy after Muhammad Ali Pasha, 1848-1898",
-        "imageKind": "paper"
+        "image": "/assets/papers/egyptian-frigate.jpeg",
+        "imageAlt": "The Egyptian steam frigate Sharkie in an 1849 lithograph",
+        "imageKind": "research"
       },
       {
         "id": "friend-of-my-enemy",
@@ -30,9 +30,9 @@
             "url": "/papers/friend-of-my-enemy.pdf"
           }
         ],
-        "image": "/assets/papers/friend-of-my-enemy.png",
-        "imageAlt": "First page of Friend of My Enemy: China, Iran and Their Unshared Adversaries",
-        "imageKind": "paper"
+        "image": "/assets/papers/china-voting.png",
+        "imageAlt": "Comparison of Chinese voting alignment with Middle Eastern states at the UN General Assembly",
+        "imageKind": "research"
       }
     ],
     "essays": [
@@ -46,13 +46,53 @@
             "url": "/papers/defeat-in-detail.pdf"
           }
         ],
-        "image": "/assets/papers/defeat-in-detail.png",
-        "imageAlt": "First page of Defeat in Detail: Re-Evaluating Japanese Stay-Behind Operations in Shanxi",
-        "imageKind": "paper"
+        "image": "/assets/papers/shanxi-map.png",
+        "imageAlt": "Historical map of the Battle of Jinzhong in Shanxi",
+        "imageKind": "research"
       }
     ]
   },
   "projects": [
+    {
+      "id": "steam-and-steel",
+      "title": "Steam and Steel",
+      "summary": "A global total conversion of Medieval II: Total War: Kingdoms, covering the political, economic and military upheavals of 1860–1900.",
+      "links": [
+        {
+          "label": "Downloads and project details on ModDB",
+          "url": "https://www.moddb.com/mods/steam-and-steel-total-war"
+        }
+      ],
+      "description": "My role: lead developer, historical researcher and media manager. The project combines a worldwide campaign with researched regions, distinct armies, and custom political, economic, social and campaign AI systems.",
+      "metrics": [
+        [
+          "33.5K",
+          "ModDB downloads"
+        ],
+        [
+          "30 + 5",
+          "Factions + sub-factions"
+        ],
+        [
+          "500",
+          "Unique units"
+        ]
+      ],
+      "metricNote": "ModDB figures, 21 October 2026. Downloads include files across releases.",
+      "image": "/assets/projects/steam-steel-battle.png",
+      "imageAlt": "Infantry advancing under fire at Königgrätz in Steam and Steel",
+      "imageKind": "feature",
+      "gallery": [
+        {
+          "src": "/assets/projects/steam-steel-qing.png",
+          "alt": "Qing cavalry in the Jiangnan campaign",
+          "caption": "Jiangnan, 1860 — Qing cavalry."
+        }
+      ],
+      "paragraphs": [
+        "Released in 2023; finalist in ModDB’s 2023 Mod of the Year awards. Development continues with faction balancing, new campaign systems and historical research."
+      ]
+    },
     {
       "id": "history-evals",
       "title": "History Evals",
@@ -65,29 +105,43 @@
       ],
       "image": "/assets/history-evals.svg",
       "imageAlt": "Historical sources become workplace assignments, followed by evaluation of model responses"
-    },
-    {
-      "id": "steam-and-steel",
-      "title": "Steam and Steel",
-      "summary": "A late-Victorian total-conversion mod for Medieval II: Total War: Kingdoms.",
-      "links": [
-        {
-          "label": "ModDB: description and downloads",
-          "url": "https://www.moddb.com/mods/steam-and-steel-total-war"
-        }
-      ]
     }
   ],
   "newsletter": [
     {
       "id": "newsletter",
       "title": "Newsletter",
-      "summary": "A news app I developed to help readers explore reporting from different perspectives.",
+      "summary": "I developed Newsletter to bring reporting from multiple sources into one reading experience, with summaries, context and article analysis.",
       "links": [
         {
           "label": "Visit Newsletter",
           "url": "https://www.newsletter-media.com/"
         }
+      ],
+      "description": "Readers can adjust summary depth, explore the sources behind a story, and examine quotations and analytical indicators alongside the reporting.",
+      "image": "/assets/projects/newsletter-perspectives.webp",
+      "imageAlt": "Newsletter app showing a story summary, source publications and adjustable summary depth",
+      "imageKind": "app",
+      "gallery": [
+        {
+          "src": "/assets/projects/newsletter-reading.webp",
+          "alt": "Newsletter app displaying sentiment, subjectivity, key quotations and related news",
+          "caption": "Article analysis, quotations and related reporting."
+        }
+      ],
+      "features": [
+        [
+          "Read across sources",
+          "Follow the publications behind a story without losing the thread."
+        ],
+        [
+          "Choose the depth",
+          "Move between concise summaries and a more detailed reading."
+        ],
+        [
+          "Examine the reporting",
+          "Explore quotations, context and analytical indicators."
+        ]
       ]
     },
     {
