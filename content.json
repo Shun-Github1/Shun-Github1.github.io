@@ -3,25 +3,43 @@
   "email": "shun.kwok@gmail.com",
   "portrait": "/assets/shun-kwok.jpg",
   "academic": {
-    "dissertation": {
-      "id": "dissertation",
-      "title": "Classification and Public Life",
-      "year": "2024",
-      "summary": "This study examines how rankings and categories shape institutions. It follows the movement from individual records to public comparisons, asking how measurement changes the people and organisations being measured.",
-      "description": "The analysis considers the relationship between technical decisions and social authority: who defines a category, which differences it preserves, and what becomes invisible when records are reduced to a common scale."
-    },
-    "essays": [
+    "dissertations": [
       {
-        "id": "essay-one",
-        "title": "Reading a Society through Its Records",
-        "year": "2023",
-        "summary": "An examination of the ways information is preserved, arranged, and lost. Archives are treated as products of selection rather than complete accounts of the past."
+        "id": "egyptian-navy",
+        "title": "The Egyptian Navy after Muhammad Ali Pasha, 1848-1898",
+        "year": "2026",
+        "summary": "A study of how a secondary navy projected power across the Black Sea, Mediterranean and Indian Ocean despite its limited size, and of its role in Egyptian political, territorial and military strategy.",
+        "links": [
+          {
+            "label": "Read PDF",
+            "url": "/papers/egyptian-navy-1848-1898.pdf"
+          }
+        ]
       },
       {
-        "id": "essay-two",
-        "title": "The Work of Comparison",
-        "year": "2023",
-        "summary": "A short essay on the assumptions required to compare institutions, and on the consequences of turning those comparisons into rankings."
+        "id": "friend-of-my-enemy",
+        "title": "Friend of My Enemy: China, Iran and Their Unshared Adversaries",
+        "year": "2025",
+        "summary": "A comparative analysis of China’s relations with Iran and Iran’s regional adversaries, using arms transfers, trade and UN General Assembly voting alignment to assess the depth of Sino-Iranian ties.",
+        "links": [
+          {
+            "label": "Read PDF",
+            "url": "/papers/friend-of-my-enemy.pdf"
+          }
+        ]
+      }
+    ],
+    "essays": [
+      {
+        "id": "defeat-in-detail",
+        "title": "Defeat in Detail: Re-Evaluating Japanese Stay-Behind Operations in Shanxi",
+        "summary": "An account of Japanese troops who remained in Shanxi after 1945, examining their organisation, relationship with Yan Xishan and role in the Chinese Civil War through Chinese and Japanese sources.",
+        "links": [
+          {
+            "label": "Read PDF",
+            "url": "/papers/defeat-in-detail.pdf"
+          }
+        ]
       }
     ]
   },
@@ -91,10 +109,6 @@
   ],
   "sampleSources": [
     {
-      "label": "Academic: Kieran Healy",
-      "url": "https://kieranhealy.org/publications/tos/"
-    },
-    {
       "label": "Projects: Thomas Mullaney",
       "url": "https://www.tsmullaney.com/"
     },
@@ -108,10 +122,10 @@
     }
   ],
   "introduction": {
-    "title": "Alex Morgan",
+    "title": "Shun Kwok",
     "paragraphs": [
-      "I study how institutions collect information and use it to organise public life. My research brings together social history, archives, and the history of technology.",
-      "My current work examines classification and comparison: how categories are made, how they travel, and what they leave out."
+      "I study how secondary empires historically projected power in global environments dominated by stronger powers. My research brings together qualitative and quantitative methods, as well comparative approaches to East Asia, the Middle East and Beyond.",
+      "My current work examines naval modernization in the 19th century - the prevailing trends, and how various states attempted to mobilize asymmetry."
     ]
   }
 }
